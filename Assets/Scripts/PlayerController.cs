@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerInput _playerInput;
+    [SerializeField] private Transform _bulletSpawner;
+    [SerializeField] Bullets _bulletPrefab;
 
     private void Start()
     {
@@ -33,6 +35,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnShoot()
     {
-
+        Instantiate(_bulletPrefab, _bulletSpawner.position, transform.rotation);
     }
 }
