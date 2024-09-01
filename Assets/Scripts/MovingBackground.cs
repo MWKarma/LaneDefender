@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingBackground : MonoBehaviour
@@ -12,17 +10,15 @@ public class MovingBackground : MonoBehaviour
         Vector2 CurrentPosition = transform.position;
 
         CurrentPosition.x -= Speed * Time.deltaTime;
+
         if (transform.position.x < -ScrollWidth)
         {
             HandleOffScreen(ref CurrentPosition);
         }
         transform.position = CurrentPosition;
-
     }
-
     public virtual void HandleOffScreen(ref Vector2 pos)
     {
-
         pos += new Vector2(ScrollWidth * 2, 0);
     }
 }
