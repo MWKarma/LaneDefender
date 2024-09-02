@@ -20,7 +20,7 @@
                     "id": "91c1d4bf-75d6-4ab0-b218-2544886af7bf",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold(duration=1.401298E-45,pressPoint=1.401298E-45)",
                     "initialStateCheck": false
                 },
                 {
@@ -113,7 +113,7 @@
                     "name": "",
                     "id": "e9d6ff07-c238-4375-963f-80759f251b0a",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
+                    "interactions": "Hold(duration=1.401298E-45,pressPoint=1.401298E-45)",
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
