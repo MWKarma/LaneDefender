@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         print("Welcome Back");
     }
 
-    private void OnMovement()
+    private void OnMovement(InputValue Value)
     {
 
     }

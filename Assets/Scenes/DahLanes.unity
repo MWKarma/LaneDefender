@@ -2759,6 +2759,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce564e275b57864db0abe1e9777368b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _livesAI: {fileID: 1307617815}
+  _scoreAI: {fileID: 22779326}
+  _highscoreAI: {fileID: 568186991}
+  _livesText: {fileID: 1307617817}
+  _scoreText: {fileID: 22779328}
+  _highScoreText: {fileID: 568186993}
 --- !u!4 &1729610687
 Transform:
   m_ObjectHideFlags: 0
