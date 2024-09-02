@@ -10,15 +10,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _livesText;
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TextMeshProUGUI _highScoreText;
-    [SerializeField] private int _lives;
+    [SerializeField] private int _lives = 3;
     [SerializeField] private int _score;
     [SerializeField] private static int _highscore;
     [SerializeField] private GameObject _enemy;
+    [SerializeField] private bool _gameOver = false;
+    [SerializeField] private GameObject _losingScreen;
 
     private void Start()
     {
-        _lives = 3;
+        _losingScreen = GameObject.Find("Losing Screen");
+
         _score = 0;
+    }
+    private void LivesUpdate()
+    {
+        _lives -= 1;
+        _livesText.text = "Lives: " + _lives.ToString();
+        CheckLives();
     }
     private void FixedUpdate()
     {
@@ -48,5 +57,16 @@ public class GameManager : MonoBehaviour
         //    _scoreText.text = "Score: " + _score.ToString();
         //}
     }
+    private void CheckLives()
+    {
+        if (_lives == 0)
+        {
+            _losingScreen?.SetActive(true);
+            _gameOver = true;
+        }
+        else
+        {
 
+        }
+    }
 }
