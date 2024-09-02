@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,15 +10,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _livesText;
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TextMeshProUGUI _highScoreText;
-    [SerializeField] private static int _lives;
-    [SerializeField] private static int _score;
+    [SerializeField] private int _lives;
+    [SerializeField] private int _score;
     [SerializeField] private static int _highscore;
+    [SerializeField] private GameObject _enemy;
 
     private void Start()
     {
         _lives = 3;
         _score = 0;
-        _highscore = 0;
     }
     private void FixedUpdate()
     {
@@ -41,6 +39,14 @@ public class GameManager : MonoBehaviour
         {
             _scoreText.text = " ";
         }
+    }
+    private void EnemiesKilledScore() //Once an enemy is killed you gain more score
+    {
+        //if ()
+        //{
+        //    _score += 100;
+        //    _scoreText.text = "Score: " + _score.ToString();
+        //}
     }
 
 }
